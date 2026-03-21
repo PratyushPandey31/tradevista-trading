@@ -20,16 +20,7 @@ Managing stock portfolios manually can be complex, time-consuming, and error-pro
 ![Frontend](screenshots/frontend.png)
 
 
----
 
-
-## 🚀 Live Application
-
-* 🔗 Frontend (Landing Page): https://zerodha-frontend-3qfs.onrender.com
-* 🔗 Trading Dashboard: https://zerodha-dashboard-gtnk.onrender.com
-* 🔗 Backend API: https://zerodha-backend-wrhv.onrender.com
-  
----
 
 ## ✨ Key Features
 
@@ -60,9 +51,7 @@ Managing stock portfolios manually can be complex, time-consuming, and error-pro
 
 * MongoDB Atlas
 
-### Deployment
 
-* Render Cloud Platform
 
 ---
 
@@ -176,16 +165,7 @@ npm start
 
 ---
 
-## 🚀 Deployment
 
-The application is deployed using Render:
-
-* Backend → Render Web Service
-* Dashboard → Render Static Site
-* Frontend → Render Static Site
-* Database → MongoDB Atlas
-
----
 
 ## 📚 Key Learnings
 
@@ -208,8 +188,8 @@ The application is deployed using Render:
 
 ## 👨‍💻 Author
 
-**Ayush Kumar**
-🔗 GitHub: https://github.com/ayushhhkumar
+**Pratyush Pandey**
+🔗 GitHub: https://github.com/Pratyush-itgithub/tradevista-trading
 
 ---
 
