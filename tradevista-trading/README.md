@@ -117,7 +117,7 @@ TradeVista/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/ayushhhkumar/tradevista-trading-dashboard.git
+git clone https://github.com/Pratyush-itgithub/tradevista-trading
 cd tradevista-trading-dashboard
 ```
 
