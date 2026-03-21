@@ -30,7 +30,7 @@ Managing stock portfolios manually can be complex, time-consuming, and error-pro
 * 🔄 REST API integration between frontend & backend
 * 📉 Interactive portfolio visualization
 * ⚡ Modular and scalable architecture
-* ☁️ Cloud deployment using Render
+
 
 ---
 
