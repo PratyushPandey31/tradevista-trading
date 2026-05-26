@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import axios from "axios";
+import api from "../utils/axios";
 import { GeneralContext } from "./GeneralContext"; // ✅ FIXED IMPORT
 import "./BuyActionWindow.css";
 
@@ -31,15 +31,19 @@ const BuyActionWindow = ({ uid }) => {
 
   const handleBuyClick = async () => {
     setError("");
+    const token = localStorage.getItem("token");
+    if (!token) {
+      setError("Please sign in to place orders.");
+      return;
+    }
     if (!validate()) return;
 
     setLoading(true);
     try {
-      await axios.post("https://zerodha-backend-wrhv.onrender.com/newOrder", {
-        name: uid,
-        qty: Number(stockQuantity),
+      await api.post("/trade/buy", {
+        symbol: uid,
+        quantity: Number(stockQuantity),
         price: orderType === "MARKET" ? 0 : Number(stockPrice),
-        mode: "BUY",
       });
 
       setSuccess(true);

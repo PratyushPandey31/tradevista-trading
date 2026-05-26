@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect, useContext } from "react";
+import api from "../utils/axios";
 import { VerticalGraph } from "./VerticalGraph";
-
-// import { holdings } from "../data/data";
+import { GeneralContext } from "./GeneralContext";
 
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
+  const { livePrices, portfolioUpdateCount } = useContext(GeneralContext);
+
   useEffect(() => {
-    axios
-      .get("https://zerodha-backend-wrhv.onrender.com/allHoldings")
+    api.get("/user/holdings")
       .then((res) => {
-        console.log(res.data);
         setAllHoldings(res.data);
-      });
-  }, []);
+      })
+      .catch((err) => console.error(err));
+  }, [portfolioUpdateCount]);
 
   const labels = allHoldings.map((subArray) => subArray["name"]);
   const data = {
     labels,
     datasets: [
       {
-        label: "Stock Price",
-        data: allHoldings.map((stock) => stock.price),
+        label: "Invested Value",
+        data: allHoldings.map((stock) => stock.avgPrice * stock.quantity),
         backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
     ],
@@ -48,25 +48,26 @@ const Holdings = () => {
 
           <tbody>
             {allHoldings.map((stock, index) => {
-              const currValue = stock.price * stock.qty;
-              const isProfit = currValue - stock.avg * stock.qty >= 0.0;
+              const currentPrice = livePrices[stock.symbol] || stock.avgPrice || 0;
+              const currValue = currentPrice * stock.quantity;
+              const investedValue = stock.avgPrice * stock.quantity;
+              const pnl = currValue - investedValue;
+              const isProfit = pnl >= 0;
               const profitClass = isProfit ? "profit" : "loss";
-              const dayClass = stock.isLoss ? "loss" : "profit";
+              const netPercent = investedValue ? ((pnl / investedValue) * 100).toFixed(2) : "0.00";
 
               return (
                 <tr key={index}>
-                  <td>{stock.name}</td>
-                  <td>{stock.qty}</td>
-                  <td>{stock.avg.toFixed(2)}</td>
-                  <td>{stock.price.toFixed(2)}</td>
+                  <td>{stock.symbol}</td>
+                  <td>{stock.quantity}</td>
+                  <td>{stock.avgPrice.toFixed(2)}</td>
+                  <td>{currentPrice.toFixed(2)}</td>
                   <td>{currValue.toFixed(2)}</td>
                   <td className={profitClass}>
-                    {isProfit ? "+" : "-"}
-                    {Math.abs(currValue - stock.avg * stock.qty).toFixed(2)} (
-                    {stock.net})
+                    {isProfit ? "+" : "-"}{Math.abs(pnl).toFixed(2)}
                   </td>
-                  <td className={profitClass}>{stock.net}</td>
-                  <td className={dayClass}>{stock.day}</td>
+                  <td className={profitClass}>{netPercent}%</td>
+                  <td className={profitClass}>---</td>
                 </tr>
               );
             })}

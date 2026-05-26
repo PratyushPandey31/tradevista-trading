@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "env": {
+    "MONGO_URL": "***REMOVED***",
+    "JWT_SECRET": "***REMOVED***",
+    "PORT": "3002"
+  },
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 50%, #1a153b 0%, #0d091a 100%);
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background Glowing Orbs */
+.auth-container::before,
+.auth-container::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 1;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.auth-container::before {
+  background: #387ed1;
+  top: 15%;
+  left: 20%;
+  animation: orbFloat 8s ease-in-out infinite alternate;
+}
+
+.auth-container::after {
+  background: #8e2de2;
+  bottom: 15%;
+  right: 20%;
+  animation: orbFloat 8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes orbFloat {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-30px) scale(1.1); }
+}
+
+.auth-box {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  padding: 48px 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.6), 
+              0 0 40px rgba(142, 45, 226, 0.15);
+}
+
+.auth-box h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth-box h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, #387ed1, #8e2de2);
+  border-radius: 2px;
+  margin: 12px auto 16px auto;
+}
+
+.auth-box p.subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.auth-box input {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 15px;
+  color: #ffffff !important;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.auth-box input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.auth-box input:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.auth-box input:focus {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-color: #387ed1;
+  box-shadow: 0 0 0 4px rgba(56, 126, 209, 0.15);
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #387ed1 0%, #8e2de2 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(142, 45, 226, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.5px;
+  margin-top: 8px;
+}
+
+.auth-box button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(142, 45, 226, 0.45);
+  filter: brightness(1.1);
+}
+
+.auth-box button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 15px rgba(142, 45, 226, 0.2);
+}
+
+.error-msg {
+  color: #ff5252;
+  background-color: rgba(255, 82, 82, 0.1);
+  border: 1px solid rgba(255, 82, 82, 0.2);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.auth-box p {
+  margin-top: 24px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.auth-box a {
+  color: #387ed1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.auth-box a:hover {
+  color: #8e2de2;
+  text-decoration: underline;
+}

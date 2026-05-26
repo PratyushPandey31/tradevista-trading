@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import TradingViewChart from "./TradingViewChart";
+import api from "../utils/axios";
 
 const Summary = () => {
+  const [user, setUser] = useState({ balance: 0 });
+
+  useEffect(() => {
+    api.get("/user/profile").then((res) => setUser(res.data)).catch((err) => console.log(err));
+  }, []);
   return (
     <>
       <div className="username">
@@ -15,7 +22,7 @@ const Summary = () => {
 
         <div className="data">
           <div className="first">
-            <h3>3.74k</h3>
+            <h3>{(user.balance / 1000).toFixed(2)}k</h3>
             <p>Margin available</p>
           </div>
           <hr />
@@ -25,7 +32,7 @@ const Summary = () => {
               Margins used <span>0</span>{" "}
             </p>
             <p>
-              Opening balance <span>3.74k</span>{" "}
+              Opening balance <span>{(user.balance / 1000).toFixed(2)}k</span>{" "}
             </p>
           </div>
         </div>
@@ -57,6 +64,8 @@ const Summary = () => {
         </div>
         <hr className="divider" />
       </div>
+
+      <TradingViewChart />
     </>
   );
 };
