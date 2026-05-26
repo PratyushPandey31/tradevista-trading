@@ -4,6 +4,14 @@ TradeVista is a full-stack stock trading dashboard inspired by modern platforms 
 
 ---
 
+## 🚀 Deployments
+
+Live URLs for the project:
+- **Backend**: https://pratyush-tradevista-backend.vercel.app
+- **Frontend**: https://pratyush-tradevista-frontend.vercel.app
+- **Dashboard**: **https://pratyush-tradevista-dashboard.vercel.app**
+---
+
 ## 🎯 Problem Statement
 
 Managing stock portfolios manually can be complex, time-consuming, and error-prone. TradeVista addresses this by providing a centralized dashboard where users can:
@@ -11,8 +19,6 @@ Managing stock portfolios manually can be complex, time-consuming, and error-pro
 * Track holdings and positions
 * Visualize portfolio performance
 * Simulate trading actions
-
----
 
 ## 📸 Screenshots
 

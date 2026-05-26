@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import "./Summary.css";
 import TradingViewChart from "./TradingViewChart";
 import api from "../utils/axios";
 
@@ -39,7 +39,7 @@ const Summary = () => {
         <hr className="divider" />
       </div>
 
-      <div className="section">
+      <div className="section highlight">
         <span>
           <p>Holdings (13)</p>
         </span>

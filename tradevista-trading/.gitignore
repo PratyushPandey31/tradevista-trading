@@ -13,3 +13,6 @@ dist/
 
 # macOS
 .DS_Store
+
+# Vercel config with sensitive env vars - use Vercel Dashboard instead
+backend/vercel.json
