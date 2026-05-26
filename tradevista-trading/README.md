@@ -184,6 +184,14 @@ npm start
 * 📱 Mobile responsiveness improvements
 * ⚡ WebSocket-based live updates
 
+## 🚀 Deployments
+
+Live URLs for the project:
+- **Backend**: https://pratyush-tradevista-backend.vercel.app
+- **Frontend**: https://pratyush-tradevista-frontend.vercel.app
+- **Dashboard**: **https://pratyush-tradevista-dashboard.vercel.app**
+
+
 ---
 
 ## 👨‍💻 Author
