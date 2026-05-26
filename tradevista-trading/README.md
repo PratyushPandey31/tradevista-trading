@@ -117,7 +117,7 @@ TradeVista/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/Pratyush-itgithub/tradevista-trading
+git clone https://github.com/PratyushPandey31/tradevista-trading.git
 cd tradevista-trading-dashboard
 ```
 
@@ -189,7 +189,7 @@ npm start
 ## 👨‍💻 Author
 
 **Pratyush Pandey**
-🔗 GitHub: https://github.com/Pratyush-itgithub/tradevista-trading
+🔗 GitHub:https://github.com/PratyushPandey31/tradevista-trading.git
 
 ---
 
