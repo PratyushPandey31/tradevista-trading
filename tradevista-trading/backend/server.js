@@ -47,7 +47,24 @@ let mockPrices = {
   TSLA: 250.00,
   META: 300.00,
   NFLX: 420.00,
-  NVDA: 450.00
+  NVDA: 450.00,
+  // Indian Stocks
+  INFY: 1555.45,
+  ONGC: 116.80,
+  TCS: 3194.80,
+  KPITTECH: 266.45,
+  QUICKHEAL: 308.55,
+  WIPRO: 577.75,
+  M&M: 779.80,
+  RELIANCE: 2112.40,
+  HUL: 512.40,
+  HINDUNILVR: 2417.40,
+  BHARTIARTL: 541.15,
+  ITC: 207.90,
+  SBIN: 430.20,
+  SGBMAY29: 4719.00,
+  TATAPOWER: 124.15,
+  HDFCBANK: 1522.35
 };
 
 // Simulate Price Changes Every 5 Seconds
