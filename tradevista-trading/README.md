@@ -8,7 +8,7 @@ TradeVista is a full-stack stock trading dashboard inspired by modern platforms 
 
 Live URLs for the project:
 - **Backend**: https://pratyush-tradevista-backend.vercel.app
-- **Frontend**: https://pratyush-tradevista.vercel.app/
+- **Frontend**: https://pratyush-tradevista.vercel.app
 - **Dashboard**: **https://pratyush-tradevista-dashboard.vercel.app**
 ---
 
@@ -194,7 +194,7 @@ npm start
 
 Live URLs for the project:
 - **Backend**: https://pratyush-tradevista-backend.vercel.app
-- **Frontend**: https://pratyush-tradevista.vercel.app/
+- **Frontend**: https://pratyush-tradevista.vercel.app
 - **Dashboard**: **https://pratyush-tradevista-dashboard.vercel.app**
 
 
