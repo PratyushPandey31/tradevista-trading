@@ -55,7 +55,7 @@ let mockPrices = {
   KPITTECH: 266.45,
   QUICKHEAL: 308.55,
   WIPRO: 577.75,
-  M&M: 779.80,
+  "M&M": 779.80,
   RELIANCE: 2112.40,
   HUL: 512.40,
   HINDUNILVR: 2417.40,

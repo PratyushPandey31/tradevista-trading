@@ -12,7 +12,7 @@ import {
 } from "@mui/icons-material";
 
 const WatchList = () => {
-  const [watchlistSymbols, setWatchlistSymbols] = useState(["AAPL", "MSFT", "GOOGL"]); 
+  const [watchlistSymbols, setWatchlistSymbols] = useState(["INFY", "ONGC", "TCS", "KPITTECH", "QUICKHEAL", "WIPRO", "M&M", "RELIANCE", "HUL"]); 
   const { livePrices } = useContext(GeneralContext);
   const [searchInput, setSearchInput] = useState("");
 

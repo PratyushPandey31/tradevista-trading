@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import "./Summary.css";
 import TradingViewChart from "./TradingViewChart";
 import api from "../utils/axios";
